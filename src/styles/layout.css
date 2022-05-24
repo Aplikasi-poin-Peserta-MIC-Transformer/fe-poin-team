@@ -1,0 +1,65 @@
+.private-header-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.top-header-content button {
+    cursor: pointer;
+    background-color: #2e2e6e40;
+    border: none;
+    color: #fff;
+    border-radius: 50px;
+    width: 60px;
+}
+
+.top-header-content svg {
+    width: 35px;
+    height: 35px;
+}
+
+.top-header-content .mic-logo {
+    width: 68px;
+    height: 44px;
+    margin: 0;
+}
+
+.private-header-container .logo-1 {
+    width: 94px;
+    height: 61px;
+}
+
+.private-header-container img {
+    margin-bottom: 10px;
+}
+
+.private-header-container h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 24px;
+    margin: 0;
+    line-height: 3rem;
+}
+
+.private-header-container h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0;
+    line-height: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.private-content-wrapper {
+    padding: 20px;
+    padding-bottom: 3rem;
+}
