@@ -1,65 +1,186 @@
 .private-header-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .top-header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .top-header-content button {
-    cursor: pointer;
-    background-color: #2e2e6e40;
-    border: none;
-    color: #fff;
-    border-radius: 50px;
-    width: 60px;
+  cursor: pointer;
+  background-color: #2e2e6e40;
+  border: none;
+  color: #fff;
+  border-radius: 50px;
+  width: 60px;
 }
 
 .top-header-content svg {
-    width: 35px;
-    height: 35px;
+  width: 35px;
+  height: 35px;
 }
 
 .top-header-content .mic-logo {
-    width: 68px;
-    height: 44px;
-    margin: 0;
+  width: 68px;
+  height: 44px;
+  margin: 0;
 }
 
 .private-header-container .logo-1 {
-    width: 94px;
-    height: 61px;
+  width: 94px;
+  height: 61px;
 }
 
 .private-header-container img {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .private-header-container h1 {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 24px;
-    margin: 0;
-    line-height: 3rem;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 24px;
+  margin: 0;
+  line-height: 3rem;
 }
 
 .private-header-container h3 {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
-    margin: 0;
-    line-height: 1.5rem;
-    margin-bottom: 3rem;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+  line-height: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .private-content-wrapper {
-    padding: 20px;
-    padding-bottom: 3rem;
+  padding: 20px;
+  padding-bottom: 3rem;
+}
+
+/* sidebar */
+.page-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+.sidebar-wrapper {
+  min-height: calc(100vh);
+  height: auto;
+  width: 240px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  flex-grow: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
+.sidebar-logo {
+    height: 3.75rem;
+    background: #428FE9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.sidebar-logo img {
+  height: inherit;
+}
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-menu .menu-link {
+  position: relative;
+  display: block;
+}
+.sidebar-menu .menu-link .menu-sub {
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+.sidebar-menu .menu-link .menu-sub li > a {
+  padding-left: 2.325rem;
+}
+.sidebar-menu .menu-link .menu-sub .active a {
+  color: #bbb;
+}
+.sidebar-menu .menu-link a,
+.sidebar-menu .menu-link button.btn-anchor,
+.sidebar-menu .menu-link.menu-heading > span {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #525f7f;
+}
+.sidebar-menu .menu-link a:hover,
+.sidebar-menu .menu-link button.btn-anchor:hover,
+.sidebar-menu .menu-link.menu-heading > span:hover {
+  color: #bbb;
+}
+.sidebar-menu .menu-link a .fas,
+.sidebar-menu .menu-link button.btn-anchor .fas,
+.sidebar-menu .menu-link.menu-heading > span .fas {
+  width: 1rem;
+  margin-right: 0.325rem;
+  display: inline-block;
+}
+.sidebar-menu .menu-link a .menu-link-arrow,
+.sidebar-menu .menu-link button.btn-anchor .menu-link-arrow,
+.sidebar-menu .menu-link.menu-heading > span .menu-link-arrow {
+  position: absolute;
+  right: 1rem;
+  top: 0.75rem;
+  margin-right: 0;
+}
+.sidebar-menu .menu-link a .label-right,
+.sidebar-menu .menu-link button.btn-anchor .label-right,
+.sidebar-menu .menu-link.menu-heading > span .label-right {
+  position: absolute;
+  right: 1rem;
+  top: 0.59rem;
+}
+.sidebar-menu .menu-link.open .menu-sub {
+  display: block;
+}
+.sidebar-menu .menu-link.menu-heading {
+  opacity: 0.5;
+}
+.sidebar-menu .menu-link.menu-heading a:hover {
+  color: #525f7f;
+}
+.sidebar-menu .menu-link.active > a,
+.sidebar-menu .menu-link.active button.btn-anchor {
+  color: #bbb;
+}
+
+.content-dashboard {
+  width: 100%;
+}
+
+.navbar {
+  background: #5050a2;
+  border-radius: 0px 0px 120px 0px;
+  height: 3.75rem;
+  border-bottom: 0.12rem solid #bac3cf;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+.navbar-block-content {
+  display: flex;
+  height: 2.1875rem;
+  vertical-align: middle;
+  align-items: center;
 }

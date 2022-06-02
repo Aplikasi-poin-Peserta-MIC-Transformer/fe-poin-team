@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "nama_event": "Kerja Praktek"
+  },
+  {
+    "id": 2,
+    "nama_event": "Seminar"
+  },
+  {
+    "id": 3,
+    "nama_event": "Workshop"
+  },
+  {
+    "id": 4,
+    "nama_event": "Pelatihan"
+  },
+  {
+    "id": 5,
+    "nama_event": "Kompetisi"
+  },
+  {
+    "id": 6,
+    "nama_event": "Konsultasi"
+  },
+  {
+    "id": 7,
+    "nama_event": "Lomba"
+  },
+  {
+    "id": 8,
+    "nama_event": "Kegiatan"
+  },
+  {
+    "id": 9,
+    "nama_event": "Kegiatan"
+  },
+  {
+    "id": 10,
+    "nama_event": "Kegiatan"
+  },
+  {
+    "id": 11,
+    "nama_event": "Kegiatan"
+  },
+  {
+    "id": 12,
+    "nama_event": "Kegiatan"
+  },
+  {
+    "id": 13,
+    "nama_event": "Kegiatan"
+  },
+  {
+    "id": 14,
+    "nama_event": "Kegiatan"
+  },
+  {
+    "id": 15,
+    "nama_event": "Kegiatan"
+  }
+]

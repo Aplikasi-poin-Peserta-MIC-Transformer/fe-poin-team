@@ -1,0 +1,10 @@
+[
+    {
+        "href": "/admin/dashboard",
+        "label": "Dashboard"
+    },
+    {
+        "href": "/admin/poin",
+        "label": "Poin"
+    }
+]

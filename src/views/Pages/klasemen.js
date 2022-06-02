@@ -9,7 +9,7 @@ const Petunjuk = () => {
         <span className='info-title'>HALO, SELAMAT PAGI</span>
         <span className='info-title'>Team CTBC</span>
         <span className='title'>Petunjuk Games :</span>
-        <table className='table-poin'>
+        <table className='table-poin table table-hover align-middle'>
           <thead>
             <tr>
               <th>Nama Team</th>
