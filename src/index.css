@@ -87,14 +87,14 @@ button.button-primary {
   flex-direction: column;
 }
 
-.form-group {
+.kelompok-form-group {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
 }
 
-.form-group label {
+.kelompok-form-group label {
   margin-right: 10px;
   font-size: 18px;
   line-height: 24px;
@@ -102,7 +102,7 @@ button.button-primary {
   width: 100%;
 }
 
-.form-control {
+.kelompok-form-control {
   border: none!important;
     border-radius: 50px!important;
     width: auto;
@@ -134,7 +134,7 @@ input:focus {
     align-items: center;
 }
 
-.sticky-bottom {
+.fixed-bottom {
     position: fixed;
     bottom: -4px;
     left: 0;

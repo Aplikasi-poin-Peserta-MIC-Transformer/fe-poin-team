@@ -19,13 +19,13 @@ const Home = () => {
       </div>
       <div className='flex-center'>
         <form onSubmit={handleSubmit}>
-          <div className='form-group'>
+          <div className='kelompok-form-group'>
             <label htmlFor='nama_team'>Nama Team</label>
-            <input type='nama_team' name='nama_team' className='form-control' id='nama_team' />
+            <input type='nama_team' name='nama_team' className='kelompok-form-control' id='nama_team' />
           </div>
-          <div className='form-group'>
+          <div className='kelompok-form-group'>
             <label htmlFor='password'>Password</label>
-            <input type='password' name='password' className='form-control' id='password' />
+            <input type='password' name='password' className='kelompok-form-control' id='password' />
           </div>
           <div className='content-center'>
             <button type='submit' className='btn-primary'>LOGIN</button>

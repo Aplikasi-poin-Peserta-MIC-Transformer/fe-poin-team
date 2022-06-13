@@ -22,13 +22,13 @@ const Register = () => {
     <div className='flext-column'>
       <form onSubmit={handleSubmit}>
         <div className='private-content-wrapper'>
-          <div className='form-group'>
+          <div className='kelompok-form-group'>
             <label htmlFor='nama_team'>Nama Team</label>
-            <input type='text' name='nama_team' className='form-control' id='nama_team' required />
+            <input type='text' name='nama_team' className='kelompok-form-control' id='nama_team' required />
           </div>
-          <div className='form-group'>
+          <div className='kelompok-form-group'>
             <label htmlFor='password'>Password</label>
-            <input type='password' name='password' className='form-control' id='password' required />
+            <input type='password' name='password' className='kelompok-form-control' id='password' required />
           </div>
           <div className='kelompok'>
             <span className='kelompok-title'>Nama Anggota :</span>
@@ -37,17 +37,17 @@ const Register = () => {
           <div className='kelompok bottom-fixed'>
             {Array.from(Array(15).keys()).map((idx) => (
               <>
-                <div className='form-group'>
-                  <input type='text' name={`nama_anggota-${idx}`} className='form-control' id={`nama_anggota-${idx}`} />
+                <div className='kelompok-form-group'>
+                  <input type='text' name={`nama_anggota-${idx}`} className='kelompok-form-control' id={`nama_anggota-${idx}`} />
                 </div>
-                <div className='form-group'>
-                  <input type='text' name={`nomor_wa-${idx}`} className='form-control' id={`nomor_wa-${idx}`} />
+                <div className='kelompok-form-group'>
+                  <input type='text' name={`nomor_wa-${idx}`} className='kelompok-form-control' id={`nomor_wa-${idx}`} />
                 </div>
               </>
             ))}
           </div>
         </div>
-        <div className='sticky-bottom'>
+        <div className='fixed-bottom'>
           <div className='content-center'>
             <button type='submit' className='btn-primary'>Register</button>
           </div>

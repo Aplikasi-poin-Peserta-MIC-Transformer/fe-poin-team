@@ -40,7 +40,7 @@ const dashboard = () => {
           <input
             type='text'
             placeholder='Search'
-            className='form-control'
+            className='kelompok-form-control'
             onChange={(e) => setFilter(e.target.value)}
           />
           <div className="input-group-prepend">

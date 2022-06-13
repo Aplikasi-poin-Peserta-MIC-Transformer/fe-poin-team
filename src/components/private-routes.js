@@ -7,9 +7,9 @@ const PerivateRoute = () => {
     console.log("🚀 ~ user", user)
     const outlet = useOutlet();
 
-    // if (!user) {
-    //     return <Navigate to="/login" replace />;
-    // }
+    if (!user) {
+        return <Navigate to="/login" replace />;
+    }
 
   return (
       <div>{outlet}</div>

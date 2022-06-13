@@ -9,14 +9,14 @@ const UserPoint = () => {
             <div className='check-user-point'>
               <form>
                 <span className='title'>Nama :</span>
-                <div className='form-group'>
-                  <input type='text' name='nama' className='form-control' id='nama' />
+                <div className='kelompok-form-group'>
+                  <input type='text' name='nama' className='kelompok-form-control' id='nama' />
                 </div>
                 <button type='submit' className='btn-primary'>Check</button>
               </form>
               <span className='title'>Nama :</span>
-              <div className='form-group point-value'>
-                <input type='text' value={0} disabled className='form-control' />
+              <div className='kelompok-form-group point-value'>
+                <input type='text' value={0} disabled className='kelompok-form-control' />
               </div>
             </div>
           </div>
