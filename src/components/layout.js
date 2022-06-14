@@ -8,7 +8,6 @@ import '../styles/layout.css'
 const Layout = () => {
     const { logout } = useAuthContext();
     const { pathname } = useLocation();
-    console.log(pathname);
     const outlet = useOutlet();
     const navigate = useNavigate();
 

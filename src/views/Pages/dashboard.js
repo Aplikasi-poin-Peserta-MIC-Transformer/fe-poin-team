@@ -2,6 +2,7 @@ import React from 'react'
 import QRCode from 'react-qr-code';
 import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../../context/authContext';
+import API from '../../api';
 
 const Klasmen = () => {
   const { user } = useAuthContext();
@@ -9,6 +10,19 @@ const Klasmen = () => {
   const refreshPage = () => {
     window.location.reload(false);
   }
+  const [pos, setPos] = React.useState(0);
+  const [jml_pos, setJmlPos] = React.useState(0);
+  const [poin, setPoin] = React.useState(0);
+
+  React.useEffect(() => {
+    API.getTeams().then(res => {
+      setPos(res.pos);
+      setJmlPos(res.jml_pos);
+      setPoin(res.total_poin);
+    }).catch(err => {
+      console.log(err);
+    })
+  }, [user])
   return (
     <>
       <div className='private-content-wrapper'>
@@ -16,19 +30,19 @@ const Klasmen = () => {
         <span className='info-title'>{user?.nama_tim}</span>
         <span className='title'>Petunjuk Games :</span>
         <ol>
-          <li>Setiap team akan menyelesaikan 10 pos</li>
+          <li>Setiap team akan menyelesaikan {jml_pos} pos</li>
           <li>Panitia menscan barcode dari setiap kelompok untuk menambahkan point</li>
           <li>Point tertinngi menjadi pemenang</li>
         </ol>
         <hr />
         <div className='content-center'>
-          <span className='jumlah-pos'>JUMLAH POS : 0/10</span>
+          <span className='jumlah-pos'>JUMLAH POS : {`${pos}/${jml_pos}`}</span>
         </div>
         <hr />
         <div className='jumlah-point'>
           <span className='title'>POINT TEAM :</span>
           <div className='kelompok-form-group'>
-            <input type='nama_team' className='kelompok-form-control' disabled value={0} />
+            <input type='nama_team' className='kelompok-form-control' disabled value={poin} />
           </div>
         </div>
         <div className='content-center' style={{ marginBottom: "3rem"}}>
