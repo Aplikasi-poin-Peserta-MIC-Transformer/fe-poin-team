@@ -34,7 +34,7 @@ const MobileView = () => {
 function App() {
   const { token } = useAuthContext();
   React.useEffect(() => {
-    axios.defaults.baseURL = "http://localhost:3000/api/v1";
+    axios.defaults.baseURL = "http://103.161.184.8/api/v1";
     axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
     axios.interceptors.request.use(config => {
       config.headers.common['access_token'] = token;
