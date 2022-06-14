@@ -40,6 +40,9 @@ function App() {
       config.headers.common['access_token'] = token;
       return config;
     });
+    axios.get('http://103.161.184.8/').then(res => {
+      console.log(res.data);
+    });
   }, [token]);
   return (
     <React.Suspense fallback={<Loading />}>
