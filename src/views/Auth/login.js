@@ -1,25 +1,43 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom"
-import { useAuth } from '../../hooks/useAuth'
+import { useAuthContext } from '../../context/authContext'
+import API from '../../api'
 
 const Login = () => {
-  const { login } = useAuth();
+  const { login } = useAuthContext();
   const navigate = useNavigate();
+  const [error, setError] = React.useState(null);
   const handleSubmit = (e) => {
     e.preventDefault();
-    login({ user: 'has login' });
+    const value = {
+      username: e.target.username.value,
+      password: e.target.password.value
+    }
+    API.loginTeams(value).then(res => {
+      console.log(res);
+      login(res);
+      navigate("/dashboard");
+    }).catch(err => {
+      console.log(err);
+      setError(
+        <div className="alert alert-danger" role="alert">
+          Username atau password tidak ditemukan!
+        </div>
+      )
+    })
   }
   return (
     <div className='private-content-wrapper'>
-    <div className='flext-column'>
+      <div className='flext-column'>
+        {error}
         <form onSubmit={handleSubmit}>
         <div className='kelompok-form-group'>
           <label htmlFor='nama_team'>Nama Team</label>
-          <input type='nama_team' name='nama_team' defaultValue="kelompok" className='kelompok-form-control' id='nama_team' />
+            <input type='nama_team' name='username' defaultValue="testteam01" className='kelompok-form-control' id='nama_team' required />
         </div>
         <div className='kelompok-form-group'>
           <label htmlFor='password'>Password</label>
-          <input type='password' name='password' defaultValue="123456" className='kelompok-form-control' id='password' />
+          <input type='password' name='password' defaultValue="123456" className='kelompok-form-control' id='password' required />
         </div>
         <div className='content-center'>
           <button type='submit' className='btn-primary'>LOGIN</button>

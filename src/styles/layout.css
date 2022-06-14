@@ -14,12 +14,15 @@
 }
 
 .top-header-content button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   cursor: pointer;
   background-color: #2e2e6e40;
   border: none;
   color: #fff;
   border-radius: 50px;
-  width: 60px;
+  padding-right: 10px;
 }
 
 .top-header-content svg {
@@ -170,7 +173,7 @@
 }
 
 .navbar {
-  background: #5050a2;
+  background: #10817d;
   border-radius: 0px 0px 120px 0px;
   height: 3.75rem;
   border-bottom: 0.12rem solid #bac3cf;

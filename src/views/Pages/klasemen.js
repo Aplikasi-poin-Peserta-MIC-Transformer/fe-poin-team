@@ -1,17 +1,31 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import API from '../../api';
+import { useAuthContext } from '../../context/authContext';
 
 const Petunjuk = () => {
+  const { user } = useAuthContext();
   const navigate = useNavigate();
+  const [data, setData] = React.useState([]);
+  const [loading, setLoading] = React.useState(true);
   const refreshPage = () => {
     window.location.reload(false);
   }
+
+  React.useEffect(() => {
+    API.getKlasemen(user?.EventId, 'team').then(res => {
+      setData(res.klasemen);
+      setLoading(false);
+    }).catch(err => {
+      console.log(err);
+    })
+  }, [user])
   return (
     <>
       <div className='private-content-wrapper'>
         <span className='info-title'>HALO, SELAMAT PAGI</span>
-        <span className='info-title'>Team CTBC</span>
-        <span className='title'>Petunjuk Games :</span>
+        <span className='info-title'>{user?.nama_tim}</span>
+        <span className='title'>Klasemen Games :</span>
         <table className='table-poin table table-hover align-middle'>
           <thead>
             <tr>
@@ -20,42 +34,15 @@ const Petunjuk = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Team CTBC</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Team CTBC</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Team CTBC</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Team CTBC</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Team CTBC</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Team CTBC</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Team CTBC</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Team CTBC</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Team CTBC</td>
-              <td>0</td>
-            </tr>
+            {!loading ? data.map((item, index) => {
+              return (
+                <tr key={index}>
+                  <td>{item.nama_tim}</td>
+                  <td>{item.total_poin}</td>
+                </tr>
+              )
+            }
+            ) : <tr><td colSpan={2}>Loading...</td></tr>}
           </tbody>
         </table>
       </div>

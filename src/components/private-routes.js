@@ -1,13 +1,12 @@
 import React from 'react'
-import { useAuth } from '../hooks/useAuth'
 import { Navigate, useOutlet } from "react-router-dom";
+import { useAuthContext } from '../context/authContext'
 
 const PerivateRoute = () => {
-    const { user } = useAuth();
-    console.log("🚀 ~ user", user)
+    const { isAuthenticated } = useAuthContext();
     const outlet = useOutlet();
 
-    if (!user) {
+    if (!isAuthenticated) {
         return <Navigate to="/login" replace />;
     }
 

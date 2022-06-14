@@ -1,8 +1,10 @@
 import React from 'react'
 import QRCode from 'react-qr-code';
 import { useNavigate } from 'react-router-dom';
+import { useAuthContext } from '../../context/authContext';
 
 const Klasmen = () => {
+  const { user } = useAuthContext();
   const navigate = useNavigate();
   const refreshPage = () => {
     window.location.reload(false);
@@ -11,7 +13,7 @@ const Klasmen = () => {
     <>
       <div className='private-content-wrapper'>
         <span className='info-title'>HALO, SELAMAT PAGI</span>
-        <span className='info-title'>Team CTBC</span>
+        <span className='info-title'>{user?.nama_tim}</span>
         <span className='title'>Petunjuk Games :</span>
         <ol>
           <li>Setiap team akan menyelesaikan 10 pos</li>
@@ -29,8 +31,8 @@ const Klasmen = () => {
             <input type='nama_team' className='kelompok-form-control' disabled value={0} />
           </div>
         </div>
-        <div className='content-center'>
-          <QRCode className='bottom-fixed' value={'43254-CTBC'} size={150} />
+        <div className='content-center' style={{ marginBottom: "3rem"}}>
+          <QRCode className='bottom-fixed' value={`team/${user?.id}/${user.EventId}`} size={300} />
         </div>
       </div>
       <div className='fixed-bottom'>

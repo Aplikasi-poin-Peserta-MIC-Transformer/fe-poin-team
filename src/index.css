@@ -55,7 +55,7 @@ tbody tr td {
 }
 
 .loading {
-    background-color: #5050A2;
+    background-color: #10817d;
     color: #fff;
 }
 
@@ -64,14 +64,14 @@ tbody tr td {
 }
 
 .private-header-wrapper {
-    background-color: #5050A2;
+    background-color: #10817d;
     padding: 20px;
     color: #fff;
     border-radius: 0px 0px 120px 0px;
 }
 
 button.button-primary {
-  background: #5050a2;
+  background: #10817d;
   border-radius: 40px;
   padding: 10px 2rem;
   border: none;
@@ -114,11 +114,11 @@ button.button-primary {
 }
 
 input:focus {
-  outline-color: #5050a2;
+  outline-color: #10817d;
 }
 
 .btn-primary {
-    background: #5050a2;
+    background: #10817d;
     border-radius: 40px;
     padding: 7px 1.5rem;
     border: none;
@@ -188,7 +188,7 @@ input:focus {
     right: 0;
     bottom: 40%;
     margin: 0 auto;
-    background: #5050a2cc;
+    background: #10817dcc;
     color: #fff;
     border-radius: 8px 8px 80px 8px;
     padding: 3rem 1rem;
@@ -205,7 +205,7 @@ input:focus {
     border-radius: 40px;
     padding: 7px 1.5rem;
     border: none;
-    color: #5050a2;
+    color: #10817d;
     font-weight: 600;
     font-size: 18px;
     line-height: 24px;
@@ -214,7 +214,7 @@ input:focus {
 
 .info-title {
     margin-bottom: 10px;
-    color: #5050A2;
+    color: #10817d;
 }
 
 .title, .jumlah-pos, .info-title {

@@ -4,6 +4,9 @@ import PerivateRoute from './components/private-routes';
 import Layout from './components/layout';
 import AdminLayout from './components/admin_layout';
 
+import axios from "axios";
+import { useAuthContext } from "./context/authContext";
+
 const Loading = React.lazy(() => import('./components/loading'));
 
 const Homepage = React.lazy(() => import('./views/home'));
@@ -29,6 +32,15 @@ const MobileView = () => {
 }
 
 function App() {
+  const { token } = useAuthContext();
+  React.useEffect(() => {
+    axios.defaults.baseURL = "http://localhost:3000/api/v1";
+    axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+    axios.interceptors.request.use(config => {
+      config.headers.common['access_token'] = token;
+      return config;
+    });
+  }, [token]);
   return (
     <React.Suspense fallback={<Loading />}>
       <Routes>
