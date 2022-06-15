@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url = 'http://103.161.184.8'
+const url = 'https://api-poin-peserta.herokuapp.com/'
 const prefix = url + '/api/v1'
 
 export const GET = (path, body) => {
