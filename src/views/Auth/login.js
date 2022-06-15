@@ -33,7 +33,7 @@ const Login = () => {
         {error}
         <form onSubmit={handleSubmit}>
         <div className='kelompok-form-group'>
-          <label htmlFor='nama_team'>Nama Team</label>
+          <label htmlFor='nama_team'>Username</label>
             <input type='nama_team' name='username' className='kelompok-form-control' id='nama_team' required />
         </div>
         <div className='kelompok-form-group'>
