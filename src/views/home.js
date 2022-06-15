@@ -2,7 +2,8 @@ import React from 'react'
 import { useNavigate } from "react-router-dom"
 import '../styles/home.css'
 import mic_logo from '../assets/logo-mic.png'
-import logo1 from '../assets/logo1.png'
+import logo_bank from '../assets/logo-bank.png'
+import event_logo_home from '../assets/event-logo-home.png'
 
 const Home = () => {
     const navigate = useNavigate();
@@ -10,10 +11,15 @@ const Home = () => {
         <>
             <div className='header-wrapper'>
                 <div className='header-container'>
-                    <img src={mic_logo} alt='' className='mic-logo'/>
-                    <img src={logo1} alt='' className='logo-1'/>
-                    <h1>WE ARE ONE FIRE</h1>
-                    <h3>FAMILY DAY</h3>
+                    <div className='logo-bank-contain'>
+                        <img src={logo_bank} alt='' className='logo-bank' />
+                    </div>
+                    <div className='middle-logo-contain'>
+                        <img src={event_logo_home} alt='' className='event-logo' />
+                    </div>
+                    <div className='mic-logo-contain'>
+                        <img src={mic_logo} alt='' className='mic-logo' />
+                    </div>
                 </div>
             </div>
             <div className='content-wrapper'>

@@ -34,20 +34,20 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
         <div className='kelompok-form-group'>
           <label htmlFor='nama_team'>Nama Team</label>
-            <input type='nama_team' name='username' defaultValue="testteam01" className='kelompok-form-control' id='nama_team' required />
+            <input type='nama_team' name='username' className='kelompok-form-control' id='nama_team' required />
         </div>
         <div className='kelompok-form-group'>
           <label htmlFor='password'>Password</label>
-          <input type='password' name='password' defaultValue="123456" className='kelompok-form-control' id='password' required />
+          <input type='password' name='password' className='kelompok-form-control' id='password' required />
         </div>
         <div className='content-center'>
           <button type='submit' className='btn-primary'>LOGIN</button>
         </div>
       </form>
-      <span className='register-info'>Belum Register ?</span>
+      {/* <span className='register-info'>Belum Register ?</span>
       <div className='content-center'>
         <button onClick={() => navigate('/register', { replace: true })} className='btn-primary'>REGISTER</button>
-      </div>
+      </div> */}
       </div>
     </div>
   )

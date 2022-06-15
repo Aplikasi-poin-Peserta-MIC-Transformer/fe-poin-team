@@ -15,26 +15,6 @@
     align-items: center;
 }
 
-.header-container h1 {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 24px;
-    margin: 0;
-    line-height: 3rem;
-}
-
-.header-container h3 {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
-    margin: 0;
-    line-height: 3rem;
-}
-
-.header-container img {
-    margin-bottom: 10px;
-}
-
 .content-wrapper {
     position: absolute;
     left: 50%;

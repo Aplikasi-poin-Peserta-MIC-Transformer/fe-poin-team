@@ -2,7 +2,6 @@ import React from 'react';
 import { Routes, Route, useOutlet } from "react-router-dom";
 import PerivateRoute from './components/private-routes';
 import Layout from './components/layout';
-import AdminLayout from './components/admin_layout';
 
 import axios from "axios";
 import { useAuthContext } from "./context/authContext";
@@ -18,12 +17,7 @@ const Register = React.lazy(() => import('./views/Auth/register'));
 const Dashboard = React.lazy(() => import('./views/Pages/dashboard'));
 const LokasiPos = React.lazy(() => import('./views/Pages/lokasi-pos'));
 const Kelasemen = React.lazy(() => import('./views/Pages/klasemen'));
-
-// admin comp
-const AdminLogin = React.lazy(() => import('./views/Admin/login'));
-const AdminDashboard = React.lazy(() => import('./views/Admin/dashboard'));
-const AdminPoin = React.lazy(() => import('./views/Admin/poin'));
-const AdminScanPoin = React.lazy(() => import('./views/Admin/scan-poin'));
+const KelolaTeam = React.lazy(() => import('./views/Pages/kelola-team'));
 
 const MobileView = () => {
   const outlet = useOutlet();
@@ -62,16 +56,11 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/lokasi-pos" element={<LokasiPos />} />
               <Route path="/kelasemen" element={<Kelasemen />} />
+              <Route path="/kelola-team" element={<KelolaTeam />} />
             </Route>
           </Route>
         </Route>
 
-        <Route path="/admin" element={<AdminLogin />} />
-        <Route path="/admin" element={<AdminLayout />} >
-          <Route path="/admin/dashboard" element={<AdminDashboard />} />
-          <Route path="/admin/poin" element={<AdminPoin />} />
-          <Route path="/admin/scan-poin" element={<AdminScanPoin />} />
-        </Route>
       </Routes>
     </React.Suspense>
   );

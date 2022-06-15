@@ -1,49 +1,45 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import API from '../../api';
 import { useAuthContext } from '../../context/authContext';
+import API from '../../api';
 
-const Petunjuk = () => {
+const KelolaTeam = () => {
   const { user } = useAuthContext();
-  const navigate = useNavigate();
   const [data, setData] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
+
+  const navigate = useNavigate();
   const refreshPage = () => {
-    API.getKlasemen(user?.EventId, 'team').then(res => {
-      setData(res.klasemen);
-      setLoading(false);
-    }).catch(err => {
-      console.log(err);
-    })
+    window.location.reload(false);
   }
 
   React.useEffect(() => {
-    API.getKlasemen(user?.EventId, 'team').then(res => {
-      setData(res.klasemen);
+    API.getTeamMemberId(user?.id).then(res => {
+      setData(res);
       setLoading(false);
     }).catch(err => {
       console.log(err);
     })
-  }, [user])
+  })
   return (
     <>
       <div className='private-content-wrapper'>
         <span className='info-title'>HALO, SELAMAT PAGI</span>
         <span className='info-title'>{user?.nama_tim}</span>
-        <span className='title'>Klasemen Games :</span>
+        <span className='title'>Member Tim :</span>
         <table className='table-poin table table-hover align-middle'>
           <thead>
             <tr>
-              <th>Nama Team</th>
-              <th>Point</th>
+              <th>Nama Member</th>
+              <th>No Wa</th>
             </tr>
           </thead>
           <tbody>
             {!loading ? data?.map((item, index) => {
               return (
                 <tr key={index}>
-                  <td>{item.nama_tim}</td>
-                  <td>{item.total_poin}</td>
+                  <td>{item.nama_member}</td>
+                  <td>{item.no_wa}</td>
                 </tr>
               )
             }
@@ -66,4 +62,4 @@ const Petunjuk = () => {
   )
 }
 
-export default Petunjuk
+export default KelolaTeam

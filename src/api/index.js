@@ -11,6 +11,8 @@ const API = {
   // teams
   loginTeams: (body) => POST("teams/login", body),
   registerTeams: (body) => POST("teams/register", body),
+  addTeamMemberId: (id) => POST(`teams/member/${id}`),
+  getTeamMemberId: (id) => GET(`teams/member/${id}`),
   getTeamsId: (id) => GET(`teams/team/${id}`),
   getAllTeams: () => GET("teams"),
   getTeamsEventId: (id) => GET(`teams/${id}`),

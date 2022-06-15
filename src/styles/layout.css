@@ -11,6 +11,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .top-header-content button {
@@ -30,36 +31,36 @@
   height: 35px;
 }
 
-.top-header-content .mic-logo {
-  width: 68px;
-  height: 44px;
+.logo-bank-contain {
+    background-color: #fff;
+    padding: 2px 10px;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.middle-logo-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2rem;
+}
+
+.logo-bank {
+  height: 30px;
   margin: 0;
 }
 
-.private-header-container .logo-1 {
-  width: 94px;
-  height: 61px;
-}
-
-.private-header-container img {
-  margin-bottom: 10px;
-}
-
-.private-header-container h1 {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 24px;
+.event-logo {
+  width: 100%;
   margin: 0;
-  line-height: 3rem;
 }
 
-.private-header-container h3 {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 24px;
-  margin: 0;
-  line-height: 1.5rem;
-  margin-bottom: 3rem;
+.mic-logo {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .private-content-wrapper {
@@ -186,4 +187,9 @@
   height: 2.1875rem;
   vertical-align: middle;
   align-items: center;
+}
+
+
+.footer-font {
+  font-size: 10px;
 }
