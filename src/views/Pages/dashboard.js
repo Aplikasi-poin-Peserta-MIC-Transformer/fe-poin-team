@@ -7,10 +7,15 @@ import API from '../../api';
 
 const Klasmen = () => {
   const { user } = useAuthContext();
-  console.log(user);
   const navigate = useNavigate();
   const refreshPage = () => {
-    window.location.reload(false);
+    API.getTeamsId(user?.id).then(res => {
+      setPos(res.pos);
+      setJmlPos(res.jml_pos);
+      setPoin(res.total_poin);
+    }).catch(err => {
+      console.log(err);
+    })
   }
   const [pos, setPos] = React.useState(0);
   const [jml_pos, setJmlPos] = React.useState(0);
