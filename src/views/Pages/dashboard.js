@@ -36,11 +36,11 @@ const Klasmen = () => {
             <ol>
               <li>Setiap team akan menyelesaikan {jml_pos} pos</li>
               <li>Panitia menscan barcode dari setiap kelompok untuk menambahkan point</li>
-              <li>Point tertinngi menjadi pemenang</li>
+              <li>Point tertingi menjadi pemenang</li>
             </ol>
             <hr />
             <div className='content-center'>
-              <span className='jumlah-pos'>JUMLAH POS : {`${pos}/${jml_pos}`}</span>
+              <span className='jumlah-pos'>JUMLAH POS : {`${pos === undefined ? 0 : pos}/${jml_pos}`}</span>
             </div>
             <hr />
             <div className='jumlah-point'>
