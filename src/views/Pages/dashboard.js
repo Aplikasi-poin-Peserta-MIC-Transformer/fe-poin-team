@@ -3,7 +3,7 @@ import QRCode from 'react-qr-code';
 import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../../context/authContext';
 import API from '../../api';
-import AddMembers from './form-add-member';
+// import AddMembers from './form-add-member';
 
 const Klasmen = () => {
   const { user } = useAuthContext();
@@ -28,8 +28,8 @@ const Klasmen = () => {
   return (
     <>
       <div className='private-content-wrapper'>
-        {user?.totalTeamMember > 0 ? (
-          <>
+        {/* {user?.totalTeamMember > 0 ? (
+          <> */}
             <span className='info-title'>HALO, SELAMAT PAGI</span>
             <span className='info-title'>{user?.nama_tim}</span>
             <span className='title'>Petunjuk Games :</span>
@@ -52,10 +52,10 @@ const Klasmen = () => {
             <div className='content-center' style={{ marginBottom: "3rem" }}>
               <QRCode className='bottom-fixed' value={`team/${user?.id}/${user.EventId}`} size={300} />
             </div>
-          </>
+          {/* </>
         ) : (
             <AddMembers />
-        )}
+        )} */}
       </div>
       <div className='fixed-bottom'>
         <div className='container-width'>
