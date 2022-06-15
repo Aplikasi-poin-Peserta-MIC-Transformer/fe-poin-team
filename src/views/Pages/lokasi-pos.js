@@ -1,10 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import map_image from '../../assets/map-example.png'
+// import map_image from '../../assets/map-example.png'
 import { useAuthContext } from '../../context/authContext';
 
 const LokasiPos = () => {
   const { user } = useAuthContext();
+  // console.log(user);
   const navigate = useNavigate();
   const refreshPage = () => {
     window.location.reload(false);
@@ -15,7 +16,7 @@ const LokasiPos = () => {
         <span className='info-title'>HALO, SELAMAT PAGI</span>
         <span className='info-title'>{user?.nama_tim}</span>
         <span className='title'>Lokasi Pos :</span>
-        <img src={map_image} alt='' className='pos-image' />
+        <img src={user?.gambar} alt='' className='pos-image' />
       </div>
       <div className='fixed-bottom'>
         <div className='container-width'>
