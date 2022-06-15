@@ -1,10 +1,10 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom"
-import { useAuthContext } from '../../context/authContext'
+// import { useAuthContext } from '../../context/authContext'
 import API from '../../api'
 
 const Login = () => {
-  const { login } = useAuthContext();
+  // const { login } = useAuthContext();
   const navigate = useNavigate();
   const [error, setError] = React.useState(null);
   const handleSubmit = (e) => {
