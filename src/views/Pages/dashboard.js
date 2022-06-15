@@ -35,29 +35,30 @@ const Klasmen = () => {
       <div className='private-content-wrapper'>
         {/* {user?.totalTeamMember > 0 ? (
           <> */}
-            <span className='info-title'>HALO, SELAMAT PAGI</span>
-            <span className='info-title'>{user?.nama_tim}</span>
-            <span className='title'>Petunjuk Games :</span>
-            <ol>
-              <li>Setiap team akan menyelesaikan {jml_pos} pos</li>
-              <li>Panitia menscan barcode dari setiap kelompok untuk menambahkan point</li>
-              <li>Point tertingi menjadi pemenang</li>
-            </ol>
-            <hr />
-            <div className='content-center'>
-              <span className='jumlah-pos'>JUMLAH POS : {`${pos === undefined ? 0 : pos}/${jml_pos}`}</span>
-            </div>
-            <hr />
-            <div className='jumlah-point'>
-              <span className='title'>POINT TEAM :</span>
-              <div className='kelompok-form-group'>
-                <input type='nama_team' className='kelompok-form-control' disabled value={poin} />
-              </div>
-            </div>
-            <div className='content-center' style={{ marginBottom: "3rem" }}>
-              <QRCode className='bottom-fixed' value={`team/${user?.id}/${user.EventId}`} size={300} />
-            </div>
-          {/* </>
+        <span className='info-title'>HALO, SELAMAT PAGI</span>
+        <span className='info-title'>{user?.nama_tim}</span>
+        <span className='title'>Petunjuk Games :</span>
+        <ol>
+          <li>Setiap team akan menyelesaikan {jml_pos} pos</li>
+          <li>Panitia menscan barcode dari setiap kelompok untuk menambahkan point</li>
+          <li>Point tertingi menjadi pemenang</li>
+          <li>Jika setelah mendapat point (scan) dari panitia maka klik tombol refresh (untuk update point tambahan)</li>
+        </ol>
+        <hr />
+        <div className='content-center'>
+          <span className='jumlah-pos'>JUMLAH POS : {`${pos === undefined ? 0 : pos}/${jml_pos}`}</span>
+        </div>
+        <hr />
+        <div className='jumlah-point'>
+          <span className='title'>POINT TEAM :</span>
+          <div className='kelompok-form-group'>
+            <input type='nama_team' className='kelompok-form-control' disabled value={poin} />
+          </div>
+        </div>
+        <div className='content-center' style={{ marginBottom: "3rem" }}>
+          <QRCode className='bottom-fixed' value={`team/${user?.id}/${user.EventId}`} size={300} />
+        </div>
+        {/* </>
         ) : (
             <AddMembers />
         )} */}
