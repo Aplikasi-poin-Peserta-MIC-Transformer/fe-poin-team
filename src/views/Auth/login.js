@@ -15,9 +15,9 @@ const Login = () => {
     }
     API.loginTeams(value).then(res => {
       console.log(res);
-      login(res);
+      // login(res);
       // window.location.href = '/dashboard';
-      navigate("/dashboard");
+      // navigate("/dashboard");
     }).catch(err => {
       console.log(err);
       setError(
