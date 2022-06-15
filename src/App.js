@@ -6,6 +6,7 @@ import AdminLayout from './components/admin_layout';
 
 import axios from "axios";
 import { useAuthContext } from "./context/authContext";
+import { checkAPI } from './api/method';
 
 const Loading = React.lazy(() => import('./components/loading'));
 
@@ -34,15 +35,14 @@ const MobileView = () => {
 function App() {
   const { token } = useAuthContext();
   React.useEffect(() => {
-    axios.defaults.baseURL = "http://103.161.184.8/api/v1";
     axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
     axios.interceptors.request.use(config => {
       config.headers.common['access_token'] = token;
       return config;
     });
-    axios.get('http://103.161.184.8/').then(res => {
-      console.log(res.data);
-    });
+    checkAPI().then(res => { 
+      console.log(res);
+    })
   }, [token]);
   return (
     <React.Suspense fallback={<Loading />}>

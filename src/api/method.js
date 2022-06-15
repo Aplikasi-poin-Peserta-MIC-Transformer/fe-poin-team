@@ -1,8 +1,11 @@
 import axios from 'axios'
 
+const url = 'http://103.161.184.8'
+const prefix = url + '/api/v1'
+
 export const GET = (path, body) => {
   const promise = new Promise((resolve, reject) => {
-    axios.get(`/${path}`, body)
+    axios.get(`${prefix}/${path}`, body)
       .then((result) => {
         resolve(result.data);
       }, (err) => {
@@ -14,7 +17,7 @@ export const GET = (path, body) => {
 
 export const POST = (path, body) => {
   const promise = new Promise((resolve, reject) => {
-    axios.post(`/${path}`, body)
+    axios.post(`${prefix}/${path}`, body)
       .then((result) => {
         resolve(result.data);
       }, (err) => {
@@ -26,7 +29,7 @@ export const POST = (path, body) => {
 
 export const PUT = (path, body) => {
   const promise = new Promise((resolve, reject) => {
-    axios.put(`/${path}`, body)
+    axios.put(`${prefix}/${path}`, body)
       .then((result) => {
         resolve(result.data);
       }, (err) => {
@@ -38,7 +41,20 @@ export const PUT = (path, body) => {
 
 export const DELETE = (path, body) => {
   const promise = new Promise((resolve, reject) => {
-    axios.delete(`/${path}`, body)
+    axios.delete(`${prefix}/${path}`, body)
+      .then((result) => {
+        resolve(result.data);
+      }, (err) => {
+        reject.apply(err);
+      })
+  })
+  return promise
+}
+
+
+export const checkAPI = () => {
+  const promise = new Promise((resolve, reject) => {
+    axios.get(`${url}`)
       .then((result) => {
         resolve(result.data);
       }, (err) => {

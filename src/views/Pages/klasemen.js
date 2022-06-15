@@ -9,7 +9,12 @@ const Petunjuk = () => {
   const [data, setData] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
   const refreshPage = () => {
-    window.location.reload(false);
+    API.getKlasemen(user?.EventId, 'team').then(res => {
+      setData(res.klasemen);
+      setLoading(false);
+    }).catch(err => {
+      console.log(err);
+    })
   }
 
   React.useEffect(() => {
@@ -34,7 +39,7 @@ const Petunjuk = () => {
             </tr>
           </thead>
           <tbody>
-            {!loading ? data.map((item, index) => {
+            {!loading ? data?.map((item, index) => {
               return (
                 <tr key={index}>
                   <td>{item.nama_tim}</td>

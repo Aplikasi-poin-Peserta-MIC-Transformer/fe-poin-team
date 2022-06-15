@@ -15,7 +15,7 @@ const Klasmen = () => {
   const [poin, setPoin] = React.useState(0);
 
   React.useEffect(() => {
-    API.getTeams().then(res => {
+    API.getTeamsId(user?.id).then(res => {
       setPos(res.pos);
       setJmlPos(res.jml_pos);
       setPoin(res.total_poin);
