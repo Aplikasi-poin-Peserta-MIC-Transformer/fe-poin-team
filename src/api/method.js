@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const url = 'https://api-poin-peserta.herokuapp.com/'
-const prefix = url + '/api/v1'
+const prefix = url + 'api/v1'
 
 export const GET = (path, body) => {
   const promise = new Promise((resolve, reject) => {
